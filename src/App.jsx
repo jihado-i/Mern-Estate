@@ -1,11 +1,21 @@
+import {BrowserRouter,Routs,Route} from 'react-router-dom';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Profile from './Pages/Profile';
+import Signin from './Pages/SignIn';
+import SignUp from './Pages/SignUp';
 
 const App = () => {
-  return (
-    <h1 className='bg-green-600 text-white font-bold  p-9'>
-      Hello world!
-    </h1>
-
-  )
+  return <BrowserRouter>
+    <Routs>
+      <Route path='/' element={<Home/>} />
+      <Route path='/sign-in' element={<Signin/>} />
+      <Route path='/sign-up' element={<SignUp/>} />
+      <Route path='/about' element={<About/>} />
+      <Route path='/profile' element={<Profile/>} />
+    </Routs>
+    </BrowserRouter>
+  
 }
 
 export default App
